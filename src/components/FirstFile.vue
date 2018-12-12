@@ -37,6 +37,15 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  @import '/src/style/mixin';
+
+  .loginContainer{
+    padding-top: 1.95rem;
+    p, span, input{
+      font-family: Helvetica Neue,Tahoma,Arial;
+    }
+  }
 
 </style>
