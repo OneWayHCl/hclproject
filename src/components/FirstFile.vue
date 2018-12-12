@@ -1,14 +1,18 @@
 <template>
   <div>
-    <img src="@/assets/logo.png" width="200" height="200">
+    <!--<img src="@/assets/logo.png" width="200" height="200">-->
 
-    <br>
-    <div>用户名<input v-model="username"></div>
+    <el-header>Heather</el-header>
 
-       <div>密码<input v-model="password"></div>
+    <el-row>
+      <el-input type="text" placeholder="请输入用户名" v-model="username"></el-input>
+    </el-row>
 
-    <br>
-    <button v-on:click="handleLogin">登录</button>
+    <el-row>
+      <el-input type="password" placeholder="请输入密码" v-model="password"></el-input>
+    </el-row>
+
+    <el-button style="width: 20%" v-on:click="handleLogin">登录</el-button>
 
   </div>
 </template>
@@ -18,8 +22,8 @@
       name: "FirstFile",
       data() {
         return {
-          username:'username',
-          password:'11111111'
+          username:'',
+          password:''
 
         }
       },
@@ -27,11 +31,10 @@
         methods:{
           handleLogin(){
             console.log('用户名:' +this.username + '密码:' + this.password)
+
+            this.$router.push({path: '/hello'})
           }
-
         }
-
-
     }
 
 
@@ -39,12 +42,19 @@
 
 <style lang="scss" scoped>
 
-  @import '/src/style/mixin';
+  @import 'src/style/mixin';
 
   .loginContainer{
     padding-top: 1.95rem;
     p, span, input{
       font-family: Helvetica Neue,Tahoma,Arial;
+    }
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
