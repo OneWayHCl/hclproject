@@ -4,8 +4,9 @@ import Vue from 'vue'
 
 Vue.use(Router);
 
-const login = r => require.ensure([], () => r(require('@/components/FirstFile')), 'login')
+const login = r => require.ensure([], () => r(require('@/components/login')), 'login')
 const hello = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'hello')
+const home = r => require.ensure([], () => r(require('@/components/home')), 'home')
 
 const routes = [{
   path: '/',
@@ -16,9 +17,15 @@ const routes = [{
       path: '',
       redirect: '/login'
     },
+    // 登录页面
     {
       path: '/login',
       component: login
+    },
+    // 登录页面
+    {
+      path: '/home',
+      component: home
     },
     // hello
     {

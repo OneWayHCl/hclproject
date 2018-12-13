@@ -13,13 +13,14 @@
     </el-row>
 
     <el-button style="width: 20%" v-on:click="handleLogin">登录</el-button>
+    <el-button style="width: 20%" v-on:click="pushToHome">主页</el-button>
 
   </div>
 </template>
 
 <script>
     export default {
-      name: "FirstFile",
+      name: "login",
       data() {
         return {
           username:'',
@@ -32,7 +33,19 @@
           handleLogin(){
             console.log('用户名:' +this.username + '密码:' + this.password)
 
-            this.$router.push({path: '/hello'})
+            if (this.username.length <= 0) {
+              alert('请输入用户名');
+            }
+            else if (this.password.length <= 0) {
+              alert('请输入密码');
+            }
+            else {
+              this.$router.push({path: '/hello'})
+            }
+          },
+
+          pushToHome(){
+            this.$router.push({path: '/home'})
           }
         }
     }
