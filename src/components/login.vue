@@ -12,9 +12,10 @@
       <el-input type="password" placeholder="请输入密码" v-model="password"></el-input>
     </el-row>
 
-    <el-button style="width: 20%" v-on:click="handleLogin">登录</el-button>
-    <el-button style="width: 20%" v-on:click="pushToHome">主页</el-button>
-    <el-button style="width: 20%" v-on:click="pushToTest">测试页</el-button>
+    <el-button style="width: 15%" v-on:click="handleLogin">登录</el-button>
+    <el-button style="width: 15%" v-on:click="pushToHome">主页</el-button>
+    <el-button style="width: 15%" v-on:click="pushToTest">测试1</el-button>
+    <el-button style="width: 15%" v-on:click="pushTo2Test">测试2</el-button>
 
   </div>
 </template>
@@ -50,7 +51,11 @@
           },
 
           pushToTest(){
-            this.$router.push({path: '/testview'})
+            this.$router.push({path: '/buttonview'})
+          },
+
+          pushTo2Test(){
+            this.$router.push({path: '/ceshiview'})
           }
         }
     }

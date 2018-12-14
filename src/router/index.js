@@ -7,7 +7,8 @@ Vue.use(Router);
 const login = r => require.ensure([], () => r(require('@/components/login')), 'login')
 const hello = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'hello')
 const home = r => require.ensure([], () => r(require('@/components/home')), 'home')
-const testview = r => require.ensure([], () => r(require('@/components/testview')), 'testview')
+const buttonview = r => require.ensure([], () => r(require('@/components/buttonview')), 'buttonview')
+const ceshiview = r => require.ensure([], () => r(require('@/components/ceshiview')), 'ceshiview')
 
 const routes = [{
   path: '/',
@@ -30,8 +31,13 @@ const routes = [{
     },
     // 测试面
     {
-      path: '/testview',
-      component: testview
+      path: '/buttonview',
+      component: buttonview
+    },
+    // 测试面
+    {
+      path: '/ceshiview',
+      component: ceshiview
     },
     // hello
     {
