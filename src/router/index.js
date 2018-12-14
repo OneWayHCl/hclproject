@@ -7,6 +7,7 @@ Vue.use(Router);
 const login = r => require.ensure([], () => r(require('@/components/login')), 'login')
 const hello = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'hello')
 const home = r => require.ensure([], () => r(require('@/components/home')), 'home')
+const testview = r => require.ensure([], () => r(require('@/components/testview')), 'testview')
 
 const routes = [{
   path: '/',
@@ -22,10 +23,15 @@ const routes = [{
       path: '/login',
       component: login
     },
-    // 登录页面
+    // 主页面
     {
       path: '/home',
       component: home
+    },
+    // 测试面
+    {
+      path: '/testview',
+      component: testview
     },
     // hello
     {

@@ -14,6 +14,7 @@
 
     <el-button style="width: 20%" v-on:click="handleLogin">登录</el-button>
     <el-button style="width: 20%" v-on:click="pushToHome">主页</el-button>
+    <el-button style="width: 20%" v-on:click="pushToTest">测试页</el-button>
 
   </div>
 </template>
@@ -46,6 +47,10 @@
 
           pushToHome(){
             this.$router.push({path: '/home'})
+          },
+
+          pushToTest(){
+            this.$router.push({path: '/testview'})
           }
         }
     }
