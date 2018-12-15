@@ -9,6 +9,8 @@ const hello = r => require.ensure([], () => r(require('@/components/HelloWorld')
 const home = r => require.ensure([], () => r(require('@/components/home')), 'home')
 const buttonview = r => require.ensure([], () => r(require('@/components/buttonview')), 'buttonview')
 const ceshiview = r => require.ensure([], () => r(require('@/components/ceshiview')), 'ceshiview')
+const errorPage = r => require.ensure([], () => r(require('@/components/errorPage')), 'errorPage')
+const errorCode = r => require.ensure([], () => r(require('@/components/errorCode')), 'errorCode')
 
 const routes = [{
   path: '/',
@@ -38,6 +40,16 @@ const routes = [{
     {
       path: '/ceshiview',
       component: ceshiview
+    },
+    // 测试面
+    {
+      path: '/errorPage',
+      component: errorPage
+    },
+    // 测试面
+    {
+      path: '/errorCode',
+      component: errorCode
     },
     // hello
     {

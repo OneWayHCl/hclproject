@@ -14,8 +14,8 @@
 
     <el-button style="width: 15%" v-on:click="handleLogin">登录</el-button>
     <el-button style="width: 15%" v-on:click="pushToHome">主页</el-button>
-    <el-button style="width: 15%" v-on:click="pushToTest">测试1</el-button>
-    <el-button style="width: 15%" v-on:click="pushTo2Test">测试2</el-button>
+    <el-button style="width: 15%" v-on:click="pushToTest">404页面</el-button>
+    <el-button style="width: 15%" v-on:click="pushTo2Test">错误码页</el-button>
 
   </div>
 </template>
@@ -51,11 +51,11 @@
           },
 
           pushToTest(){
-            this.$router.push({path: '/buttonview'})
+            this.$router.push({path: '/errorPage'})
           },
 
           pushTo2Test(){
-            this.$router.push({path: '/ceshiview'})
+            this.$router.push({path: '/errorCode'})
           }
         }
     }
