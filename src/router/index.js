@@ -12,6 +12,9 @@ const ceshiview = r => require.ensure([], () => r(require('@/components/ceshivie
 const errorPage = r => require.ensure([], () => r(require('@/components/errorPage')), 'errorPage')
 const errorCode = r => require.ensure([], () => r(require('@/components/errorCode')), 'errorCode')
 
+const userHome = r => require.ensure([], () => r(require('@/page/userHome')), 'userHome')
+const studySave = r => require.ensure([], () => r(require('@/components/StudySave')), 'studySave')
+
 const routes = [{
   path: '/',
   component: App, // 顶层路由，对应index.html
@@ -51,6 +54,19 @@ const routes = [{
       path: '/errorCode',
       component: errorCode
     },
+
+    // 用户端主页
+    {
+      path: '/userHome',
+      component: userHome
+    },
+
+    // 学习主页
+    {
+      path: '/StudySave',
+      component: studySave
+    },
+
     // hello
     {
       path: '/hello',

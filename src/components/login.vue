@@ -16,7 +16,9 @@
     <el-button style="width: 15%" v-on:click="pushToHome">主页</el-button>
     <el-button style="width: 15%" v-on:click="pushToTest">404页面</el-button>
     <el-button style="width: 15%" v-on:click="pushTo2Test">错误码页</el-button>
-
+    <hr>
+    <el-button style="width: 15%" v-on:click="pushToUserHome">用户端主页</el-button>
+    <el-button style="width: 15%" v-on:click="pushToStudySave">学习主页</el-button>
   </div>
 </template>
 
@@ -56,6 +58,14 @@
 
           pushTo2Test(){
             this.$router.push({path: '/errorCode'})
+          },
+
+          pushToUserHome(){
+            this.$router.push({path: '/userHome'})
+          },
+
+          pushToStudySave(){
+            this.$router.push({path: '/StudySave'})
           }
         }
     }
